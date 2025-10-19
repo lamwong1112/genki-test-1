@@ -148,8 +148,22 @@ export default function YuanQiClinic() {
       <section className="py-20 px-4 min-h-screen flex items-center bg-gradient-to-br from-background via-muted/10 to-background">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image - Show first on mobile */}
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+              <div className="w-full max-w-md h-96 rounded-lg overflow-hidden">
+        <Image
+                  src="/image/cat.jpg"
+                  alt="Cats by the window"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+          priority
+        />
+              </div>
+            </div>
+            
             {/* Left Side - Content */}
-            <div className="text-left">
+            <div className="text-left order-2 lg:order-1">
               
               {/* Dynamic Title */}
               <h2 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
@@ -199,20 +213,6 @@ export default function YuanQiClinic() {
                     了解更多
                   </a>
                 </Button>
-              </div>
-            </div>
-            
-            {/* Right Side - Cat Photo */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-md h-96 rounded-lg overflow-hidden">
-        <Image
-                  src="/image/cat.jpg"
-                  alt="Cats by the window"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-          priority
-        />
               </div>
             </div>
           </div>
